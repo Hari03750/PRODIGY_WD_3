@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title animate__animated animate__bounceIn">Ultimate Tic Tac Toe</h1>
+        
+        <div class="mode-selection animate__animated animate__fadeIn">
+            <h2>Select Game Mode</h2>
+            <div class="mode-buttons">
+                <button id="pvp-btn" class="mode-btn">Player vs Player</button>
+                <button id="pvc-btn" class="mode-btn">Player vs Computer</button>
+                <button id="cvc-btn" class="mode-btn">Computer vs Computer</button>
+            </div>
+        </div>
+
+        <div class="game-container hidden">
+            <div class="game-info">
+                <div class="player-turn">
+                    <span id="current-player">Player X's Turn</span>
+                </div>
+                <div class="scores">
+                    <div class="score" id="player-x">X: 0</div>
+                    <div class="score" id="player-o">O: 0</div>
+                    <div class="score" id="ties">Ties: 0</div>
+                </div>
+            </div>
+            
+            <div class="board" id="board"></div>
+            
+            <div class="controls">
+                <button id="restart-btn" class="control-btn">Restart Game</button>
+                <button id="new-game-btn" class="control-btn">New Game</button>
+            </div>
+        </div>
+
+        <div class="theme-toggle">
+            <button id="theme-btn">🌙 Dark Mode</button>
+        </div>
+    </div>
+
+    <div class="confetti-container hidden" id="confetti"></div>
+
+    <div class="modal hidden" id="winner-modal">
+        <div class="modal-content">
+            <h2 id="winner-text">Player X Wins!</h2>
+            <div id="trophy" class="trophy hidden">🏆</div>
+            <div id="fireworks" class="fireworks hidden">🎆</div>
+            <button id="play-again-btn" class="modal-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
